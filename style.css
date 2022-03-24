@@ -1,19 +1,43 @@
 /* TRY CUBE */
 
 /* COMPOSITION: the skeleton */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 /* UTILITY: does one job well */
 
-.bg-primary{background: #c6deee;}
-.bg-secondary {background: #81d1ff;}
+.bg-primary{background: #0a5b91;}
+.bg-secondary {background: #ffffff;}
 .color-primary {color: #8c00ff;}
 .color-secondary {color: #7417aa;}  
 
 /* BLOCK */
 
-.container__sketch {
-    width: 100px;
-    height: 100px;
+.container__column {
+    display: flex;
+    gap: 1px;
+    padding: 1px;
 }
 
-/* EXCEPTION */
+.column__pixel {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.pixel {
+    width: 10px;
+    height: 10px;    
+}
+
+/* EXCEPTION: data attribute exceptions */
