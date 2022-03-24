@@ -1,0 +1,19 @@
+/* TRY CUBE */
+
+/* COMPOSITION: the skeleton */
+
+/* UTILITY: does one job well */
+
+.bg-primary{background: #c6deee;}
+.bg-secondary {background: #81d1ff;}
+.color-primary {color: #8c00ff;}
+.color-secondary {color: #7417aa;}  
+
+/* BLOCK */
+
+.container__sketch {
+    width: 100px;
+    height: 100px;
+}
+
+/* EXCEPTION */

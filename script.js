@@ -1,0 +1,1 @@
+let gridSize = prompt("Grid Size?");
