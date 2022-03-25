@@ -1,17 +1,24 @@
-let gridSize = prompt("Grid Size?");
+let gridSize = 25;
 let grid = document.querySelector('.container__column');
+let holding = false;
 
 function makeGrid (size) {
-    console.log(size);
+    grid.setAttribute('draggable', false);
     for (let i = 1; i <= size; i++) {
         const column = document.createElement('div');
+        column.draggable = false;
+        column.ondragstart = false;
         column.classList.add('column__pixel');
         grid.appendChild(column);
         for (let j = 1; j <= size; j++) {
-            const div = document.createElement('div');
-            div.classList.add('pixel', 'bg-secondary');
-            div.addEventListener('mousedown', (e) => paintPixel(e));
-            column.appendChild(div);
+            const pixel = document.createElement('div');
+            pixel.draggable = false;
+            pixel.ondragstart = false;
+            pixel.classList.add('pixel', 'bg-secondary');
+            pixel.addEventListener('mousedown', () => holding = true);
+            pixel.addEventListener('mouseup', () => holding = false);
+            pixel.addEventListener('mousemove', (e) => paintPixel(e));
+            column.appendChild(pixel);
         }
     }    
 }
@@ -21,7 +28,9 @@ function makeGrid (size) {
 
 function paintPixel(e) {
     const square = e.target;
-    square.classList.add('painted');
+    if (holding) {
+        square.classList.add('painted');
+    }
 }
 
 makeGrid (gridSize);

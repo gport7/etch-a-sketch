@@ -17,33 +17,38 @@ body {
 /* UTILITY: does one job well */
 
 .bg-primary{background: #0a5b91;}
-.bg-secondary {background: #ffffff;}
-.color-primary {color: #8c00ff;}
-.color-secondary {color: #7417aa;}  
-
-.painted{background-color: black;}
+.bg-secondary {background: white}
+.painted{background: black;}
 
 /* BLOCK */
 
 .container__column {
     display: flex;
-    gap: 1px;
     padding: 1px;
+    /* prevent dragging */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -ms-user-drag: none;
 }
 
 .column__pixel {
     display: flex;
     flex-direction: column;
-    gap: 1px;
 }
 
 .pixel {
-    width: 10px;
-    height: 10px;    
+    width: 16px;
+    height: 16px;    
 }
 
-.pixel:hover {
-    background-color: #7417aa;
-}
+.pixel:hover {background: red;}
 
 /* EXCEPTION: data attribute exceptions */
