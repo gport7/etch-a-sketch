@@ -10,9 +10,18 @@ function makeGrid (size) {
         for (let j = 1; j <= size; j++) {
             const div = document.createElement('div');
             div.classList.add('pixel', 'bg-secondary');
+            div.addEventListener('mousedown', (e) => paintPixel(e));
             column.appendChild(div);
         }
     }    
+}
+
+// determine if mouse button is being held down or not
+
+
+function paintPixel(e) {
+    const square = e.target;
+    square.classList.add('painted');
 }
 
 makeGrid (gridSize);

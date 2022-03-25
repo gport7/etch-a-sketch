@@ -21,6 +21,8 @@ body {
 .color-primary {color: #8c00ff;}
 .color-secondary {color: #7417aa;}  
 
+.painted{background-color: black;}
+
 /* BLOCK */
 
 .container__column {
@@ -38,6 +40,10 @@ body {
 .pixel {
     width: 10px;
     height: 10px;    
+}
+
+.pixel:hover {
+    background-color: #7417aa;
 }
 
 /* EXCEPTION: data attribute exceptions */
