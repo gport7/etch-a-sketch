@@ -2,6 +2,9 @@ let gridSize = 25;
 let grid = document.querySelector('.container__column');
 let holding = false;
 
+// let's you unclick the mouse anywhere on the page to turn off holding
+document.addEventListener('mouseup', () => holding = false);
+
 function makeGrid (size) {
     grid.setAttribute('draggable', false);
     for (let i = 1; i <= size; i++) {
@@ -15,16 +18,12 @@ function makeGrid (size) {
             pixel.draggable = false;
             pixel.ondragstart = false;
             pixel.classList.add('pixel', 'bg-secondary');
-            pixel.addEventListener('mousedown', () => holding = true);
-            pixel.addEventListener('mouseup', () => holding = false);
+            pixel.addEventListener('mousedown', () => holding = true);            
             pixel.addEventListener('mousemove', (e) => paintPixel(e));
             column.appendChild(pixel);
         }
     }    
 }
-
-// determine if mouse button is being held down or not
-
 
 function paintPixel(e) {
     const square = e.target;

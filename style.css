@@ -9,6 +9,7 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -46,7 +47,7 @@ body {
 
 .pixel {
     width: 16px;
-    height: 16px;    
+    height: 16px;
 }
 
 .pixel:hover {background: red;}
